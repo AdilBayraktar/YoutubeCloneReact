@@ -7,6 +7,7 @@ import icons from '../assets/icons'
 import moment from 'moment'
 import relatedVideosAction from '../redux/actions/RelatedVideosData'
 import RelatedCard from '../components/RelatedCard'
+import { numberFormatter } from '../redux/constants/NumberFurmatter'
 
 const Details = () => {
     const { id } = useParams()
@@ -33,14 +34,14 @@ const Details = () => {
                             <div className='flex space-x-10'>
                                 <span className='bg-gray-100 px-2 py-1 rounded-xl font-semibold'>{video?.snippet?.channelTitle}</span>
                                 <div className='flex items-center space-x-1 bg-gray-100 rounded-xl px-2 py-1'>
-                                    <span>{video?.statistics?.likeCount}</span>
+                                    <span>{numberFormatter(video?.statistics?.likeCount)}</span>
                                     <icons.like className='icon' />
                                 </div>
                             </div>
                             <div className='bg-gray-100 rounded-xl p-3 my-3'>
                                 <div className="flex space-x-3 my-1">
                                     <span className='text-sm text-gray-600 bg-gray-200 p-1 rounded-xl'>{moment(video?.snippet?.publishedAt).format('D-MM-YYYY')}</span>
-                                    <span className='text-sm text-gray-600 bg-gray-200 p-1 rounded-xl'>{video?.statistics?.viewCount} Views</span>
+                                    <span className='text-sm text-gray-600 bg-gray-200 p-1 rounded-xl'>{numberFormatter(video?.statistics?.viewCount)} Views</span>
                                 </div>
                                 <p className='text-sm'>{video?.snippet?.description}</p>
                                 {
