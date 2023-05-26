@@ -10,6 +10,7 @@ const homeAction = (data) => async (dispatch) => {
         part: "snippet",
         // type: "video",
         maxResults: "50",
+        regionCode: "TR",
       },
       headers: {
         "X-RapidAPI-Key": "0413e4c305mshb7d39345827e073p15f5d4jsnf424f6c0fcbf",

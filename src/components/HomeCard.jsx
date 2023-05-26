@@ -10,8 +10,8 @@ const HomeCard = ({ video }) => {
                 <div className='font-bold mt-1'>{video?.snippet.title}</div>
                 <div className='text-sm'>{video?.snippet.channelTitle}</div>
                 <div className='text-xs tracking-wide'>
-                    <span>500K </span>
-                    <span>- {fixedDate}</span>
+                    {/* <span>500K </span> */}
+                    <span>{fixedDate}</span>
                 </div>
             </div>
         </Link>

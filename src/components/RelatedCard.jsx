@@ -3,11 +3,7 @@ import React, { useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 
 const RelatedCard = ({ video }) => {
-    const { id } = useParams()
-    // console.log(id)
-    useEffect(() => {
 
-    }, [id])
 
     return (
         <Link relative='path' reloadDocument='true' to={`/video/${video?.id?.videoId}`}>
